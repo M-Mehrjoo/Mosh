@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <!-- We don´t need any classes -->
+
+    <form action="">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" autofocus />
+      </div>
+      <div class="">
+        <label for="email">Email</label>
+        <input id="email" type="email" value="mtb.mehrjoo@gmail.com" />
+      </div>
+      <div class="">
+        <label for="number">Number</label>
+        <input id="number" type="number" />
+      </div>
+      <div class="">
+        <label for="password">Password</label>
+        <input id="password" type="password" maxlength="9" />
+      </div>
+      <div class="">
+        <label for="date">Date</label>
+        <input id="date" type="date" />
+      </div>
+
+      <button type="submit">Register</button>
+      <button type="reset">clear</button>
+      <div class="">
+        <textarea placeholder="Comment"></textarea>
+        <!--  name=""cols="30" rows="10" Other attributes for textarea, but we don´t need them, becase make no change -->
+        <!-- We can use the "placeholder attribute" insted of label  -->
+        <!-- The value attribute dosen´t work for textarea. We schould write our text between <><>. -->
+      </div>
+    </form>
+  </body>
+</html>
