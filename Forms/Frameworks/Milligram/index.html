@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <!-- We don´t need any classes -->
+    <p class="title" id="first_title">Text Fields | Grouping Related Fields | Data Validation</p>
+    <form action="">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" autofocus />
+        </div>
+        <div class="">
+          <label for="email">Email</label>
+          <input id="email" type="email" value="mtb.mehrjoo@gmail.com" />
+        </div>
+        <div class="">
+          <label for="number">Number</label>
+          <input id="number" type="number" />
+        </div>
+        <div class="">
+          <label for="password">Password</label>
+          <input id="password" type="password" maxlength="9" />
+        </div>
+        <div class="">
+          <label for="date">Date</label>
+          <input id="date" type="date" />
+        </div>
+        <button type="submit">Register</button>
+        <button type="reset">clear</button>
+        <div class="">
+          <textarea placeholder="Comment"></textarea>
+          <!--  name=""cols="30" rows="10" Other attributes for textarea, but we don´t need them, becase make no change -->
+          <!-- We can use the "placeholder attribute" insted of label  -->
+          <!-- The value attribute dosen´t work for textarea. We schould write our text between <><>. -->
+        </div>
+      </fieldset>
+    </form>
+    <form action="">
+        <legend>Login</legend>
+        <div>
+          <input placeholder="Name" id="name" type="text" autofocus required />
+        </div>
+        <div class="">
+          <input placeholder="Email" id="email" type="email" required />
+        </div>
+        <div class="">
+          <input placeholder="Number" id="number" type="number" min="0" required/>
+        </div>
+        <div class="">
+          <input placeholder="Password" id="password" type="password" maxlength="9" required/> 
+        </div>
+        <div class="">
+          <input id="date" type="date" required/>
+        </div>
+        <button type="submit">Register</button>
+        <button type="reset">clear</button>
+        <div class="">
+          <textarea placeholder="Comment"></textarea>
+          <!--  name=""cols="30" rows="10" Other attributes for textarea, but we don´t need them, becase make no change -->
+          <!-- We can use the "placeholder attribute" insted of label  -->
+          <!-- The value attribute dosen´t work for textarea. We schould write our text between <><>. -->
+        </div>
+      </fieldset>
+    </form>
+    <p class="title">Data Lists</p>
+    <!-- The user can write any other text,too -->
+    <form action="">
+      <input type="text" list="countries" />
+      <datalist id="countries">
+        <option value="1">Canada</option>
+        <!--Use "data-value" instead of value -->
+        <option>Germany</option>
+        <option>Japan</option>
+      </datalist>
+    </form>
+    <p class="title">Drop-down Lists</p>
+    <!-- The user can not write any other text -->
+    <form action="">
+      <select>
+        <!-- we can allow the users to select multiple options: Apply "2"multiple" atteibutes on select element -->
+        <option value="">Select a Cours...</option>
+        <optgroup label="Front-end Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </optgroup>
+        <optgroup label="Back-end Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </optgroup>
+        <option value=""></option>
+      </select>
+    </form>
+    <p class="title">Check Boxes</p>
+    <form action="">
+      <div>
+        <input type="checkbox" id="front-end" />
+        <label class="label-inline" for="front-end">Front-end</label>
+      </div>
+      <div>
+        <input type="checkbox" id="back-end" />
+        <label class="label-inline" for="back-end">Back-end</label>
+      </div>
+    </form>
+    <p class="title">Radio Buttons</p>
+    <form action="">
+      <div>
+        <input type="radio" name="membership" id="silver" />
+        <label class="label-inline" for="silver">Silver</label>
+      </div>
+      <div>
+        <input type="radio" name="membership" id="gold" />
+        <label class="label-inline" for="gold">Gold</label>
+      </div>
+    </form>
+    <p class="title">Sliders (range selectors)</p>
+    <form action="">
+      <input type="range" min="0" max="100" />
+    </form>
+    <p class="title">File Inputs</p>
+    <form action="">
+      <input type="file" multiple accept=".jpg, .png" />
+    </form>
+    <p class="title">Hidden Fields (use for storing the ID of the content being edited, trcking...)</p>
+    <form>
+      <input type="hidden" name="course-id" value="1234" />
+    </form>
+
+  </body>
+</html>
