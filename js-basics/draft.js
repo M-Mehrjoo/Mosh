@@ -190,3 +190,78 @@ function countTruthy(array) {
 
 console.log('----------- Exercise Test -----------');
 
+// let startTime = 0;
+// let endTime = 0;
+// let duration = 0;
+// let isStarted = false;
+
+// function start() {
+//     if (isStarted) {
+//         throw new Error('Is already startet.')
+//     };
+//     isStarted = true;
+//     startTime = new Date();
+//     startTime = startTime.getTime();
+//     console.log(startTime);
+// }
+
+
+// function stop() {
+//     if (!isStarted) {
+//         throw new Error('Is not started.')
+//     };
+//     isStarted= false;
+//     endTime = new Date();
+//     endTime = endTime.getTime();
+//     console.log(endTime);
+//     duration = (endTime - startTime) / 1000
+//     console.log(duration);
+//     return duration;
+// }
+
+// function reset() {
+//     startTime = 0;
+//     endTime = 0;
+//     duration = 0;
+//     isStarted = false;
+// }
+
+
+let stopWatch = new StopWatch();
+
+function StopWatch () {
+    let startTime = 0;
+    let endTime = 0;
+    let duration = 0;
+    let isStarted = false;
+
+    this.start = () => {
+        if (isStarted) {
+            throw new Error('Is already startet.')
+        };
+        isStarted = true;
+        startTime = new Date();
+        startTime = startTime.getTime();
+    }
+
+    this.stop = () => {
+        if (!isStarted) {
+            throw new Error('Is not started.')
+        };
+        isStarted= false;
+        endTime = new Date();
+        endTime = endTime.getTime();
+        duration += ((endTime - startTime) / 1000)
+    }
+
+    this.reset = function() {
+        startTime = 0;
+        endTime = 0;
+        duration = 0;
+        isStarted = false;
+    }
+   
+    Object.defineProperty(this, 'duration', {
+        get: () => {return duration}
+    })
+}
