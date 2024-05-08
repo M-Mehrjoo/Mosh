@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--desctiption text about the site -->
+    <meta name="description" content="..." />
+
+    <title>My first web page</title>
+
+    <!-- external stylesheets -->
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="slyles.css" />
+
+    <!-- embeded stylesheets -->
+    <style>
+      html,
+      p {
+        font-family: Arial, sans-serif;
+      }
+      .profile-image {
+        width: 5rem;
+        height: 5rem;
+        float: left;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+
+      .username {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .message {
+        font-size: 1rem;
+        font-weight: lighter;
+      }
+      header {
+        margin-bottom: 5rem;
+      }
+
+      em {
+        font-style: normal;
+        color: rgb(243, 139, 186);
+      }
+
+      video {
+        width: 15rem;
+        margin: 2rem -2.4rem;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        float: right;
+        padding-left: 1rem;
+      }
+
+      table,
+      caption,
+      th,
+      td {
+        border: 1px solid green;
+        border-collapse: collapse;
+        padding: 0.5rem;
+      }
+
+      th {
+        text-align: left;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>About me</li>
+          <li>Courses</li>
+          <li>Contact me</li>
+        </ul>
+      </nav>
+      <div>
+        <img src="img/avatar.png" class="profile-image" alt="avatar-photo" />
+        <p class="username">@mahtabmehrjoo</p>
+        <!-- wraping sth. -> select -> open command -> search wrap with Abbreviation -> type name of your element -> em -->
+        <p class="message">I love to be a <em>programmer</em></p>
+      </div>
+    </header>
+
+    <main>
+      <section id="courses">
+        <h1>Programming</h1>
+        <p>
+          Published <time datetime="2024-05-08 10:20"> May 8 2024 10:20am</time>
+        </p>
+        <h2>HTML</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <mark>Voluptates</mark>
+          architecto harum quibusdam porro vero veniam amet esse nihil, animi
+          debitis! Dolore perspiciatis molestias aliquam asperiores alias quod
+          laborum facere vitae et. Nulla expedita ipsam tempore nesciunt.
+          Deserunt dignissimos laudantium vero id. Iure, ipsa vero suscipit
+          officiis exercitationem atque accusantium quod dolor vel delectus.
+          Eligendi animi atque vitae delectus dolore corporis obcaecati harum
+          quod laudantium esse, asperiores labore et recusandae perferendis qui
+          rerum deleniti nemo. Libero nihil itaque cum modi quasi!
+        </p>
+        <h2>CSS</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cumque,
+          vero unde aspernatur impedit neque molestias quas odio voluptatum in
+          eum! <mark>Laborum</mark> voluptatibus ratione officiis officia
+          adipisci sed eveniet illo porro! Delectus hic nemo, accusamus ratione
+          corrupti accusantium ipsam. Placeat cupiditate vitae necessitatibus
+          tempora accusamus.
+        </p>
+      </section>
+      <article>
+        <!-- &...; ... = The name of entity-->
+        &copy; &lt; &gt;&nbsp;
+        <br />
+        <a href="https://google.com" target="_blank" title="www.google.com"
+          >Google</a
+        >
+        <a href="mailto:mtb.mehrjoo@gmail.com" title="mtb.mehrjoo@gmail.com"
+          >Email Me</a
+        >
+      </article>
+      <figure>
+        <video poster="img/loewenzahn.jpg" autoplay src="video/Dandelion.mp4">
+          Your browser dosn#t support videos.
+        </video>
+      </figure>
+
+      <figure>
+        <!-- <iframe src="" frameborder="0"></iframe> -->
+      </figure>
+
+      <article>
+        <table>
+          <thead>
+            <caption>
+              members
+            </caption>
+            <tr>
+              <th>name</th>
+              <th>course</th>
+              <th>point</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>nojan</td>
+              <td>java</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td>mahtab</td>
+              <td>javaScript</td>
+              <td>46</td>
+            </tr>
+            <tr>
+              <td>zohreh</td>
+              <td>paython</td>
+              <td>12</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+    <div class="box">
+      <h1>Mahtab<br />Mehrjoo</h1>
+    </div>
+  </body>
+</html>

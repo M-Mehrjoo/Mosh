@@ -1,0 +1,89 @@
+/* CSS Basics */
+body {
+    margin: 10px;
+}
+
+/* relational selectors */
+#courses h2 {
+    color: green;
+    margin-bottom: 5px;
+}
+
+#courses p {
+    margin-top: 0;
+    color: rgb(61, 60, 60)
+
+}
+
+/* Pseudo-class selectors -> first part (#courses p) is a relational selectors*/
+#courses h1:first-of-type {
+    color: rgb(61, 60, 60)
+}
+
+#courses p:first-of-type {
+    color: darkgray;
+}
+
+a:visited,
+a:link {
+  color: dodgerblue;
+}
+
+a:hover,
+a:focus {
+    color: green;
+}
+
+/*  Pseudo-element selectors -> To style a part of an element
+    part1: relational selectors
+    part2: Pseudo-class selectors
+    part3: Pseudo-element selectors */ 
+#courses p:last-child::first-letter{
+    font-size: 140%;
+    font-weight: bold;
+}
+
+::selection {
+    background-color: rgb(147, 198, 138);
+}
+
+.message ::after {
+    content: "...";
+}
+/* add a style to different elements  */
+p,
+table {
+    color: rgb(61, 60, 60);
+}
+
+/* inheritance */
+main article table {
+    color: rgb(10, 171, 171);
+}
+
+th {
+    color: initial;
+}
+
+.box {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;    /* horizental*/
+    align-items: center;        /* vertical*/
+    background: gold;
+    background: linear-gradient(315deg, rgb(2, 2, 212), rgb(14, 249, 14)90%);
+    box-shadow: 0 0 6px rgb(72, 72, 72);
+}
+
+.box h1 {
+    text-align: center;
+    color: rgb(254, 255, 249);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+    /*  To horizontally center a block element (like <h1>), use margin: auto; 
+        margin: auto; */
+}
+
