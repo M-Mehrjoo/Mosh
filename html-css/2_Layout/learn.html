@@ -6,91 +6,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/html-css/normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="learn.css" />
   </head>
   <body>
-    v1 and v2: flex
-    <div class="boxes-v1">
-      <div class="box-v1 box-one-v1"></div>
-      <div class="box-v1 box-two-v1"></div>
-      <div class="box-v1 box-three-v1"></div>
-    </div>
-    <article class="container-v2">
-      <div class="box-v2 box-A-v2">A</div>
-      <div class="box-v2">B</div>
-      <div class="box-v2">C</div>
+    <!-- Overflow -->
+    <section id="overflow">
+      <h1 class="title">Overflow</h1>
+      <div class="container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aperiam
+          labore dignissimos voluptas. Cupiditate in consequatur atque eaque
+          optio molestiae?
+        </p>
+      </div>
+    </section>
+    <!-- absolut & relative position -->
+    <section id="absolut-relative-position">
+      <div class="title">
+        <h1>Absolut & Relative Position</h1>
+        <p>
+          1. by default the position of all elements is
+          <em>static</em>(they are not positioned)<br />2.
+          <em>relative position</em>
+          means we can position the element
+          <em>relative to it's nomal position</em><br />3. with
+          <em>absolut position</em> we can position the element
+          <em>relative to it's container</em> -> we should set the
+          <em>position</em> property of <em>container</em> to relative.
+        </p>
+      </div>
+      <div class="container">
+        <div class="box box-one"></div>
+        <div class="box box-two"></div>
+        <div class="box box-three"></div>
+        <div class="box box-four"></div>
+      </div>
+    </section>
+
+    <!-- Fixed-position -->
+    <article id="fixed-position">
+      <div class="box">
+        <p>
+          relative to the viewport <em>fixed position</em> means to place the
+          element<em> relative to the viewport</em><br />like a navigation bar
+          that always stay on the top
+        </p>
+      </div>
     </article>
-    <!-- v3 and v4: grid -->
-    <div class="container-v3">
-      <div class="box-v3">A</div>
-      <div class="box-v3">B</div>
-      <div class="box-v3">C</div>
-      <div class="box-v3">D</div>
-      <div class="box-v3">E</div>
-      <div class="box-v3">F</div>
-    </div>
-    <div class="container-v4">
-      <div class="box-v4 box-one-v4">A</div>
-      <div class="box-v4">B</div>
-      <div class="box-v4">C</div>
-      <div class="box-v4 box-four-v4">D</div>
-    </div>
+
+    <!-- Flex box -->
+    <article id="flex-box">
+      <!-- Part1 -->
+      <section class="part1">
+        <div class="title">
+          <h1>Flex-Box (Part 1)-> Direction & Alignment</h1>
+          <p>
+            1. <em>display</em> property of container: <em>flex</em><br />2.
+            <em>flex-direction</em> is by default <em>row</em> (A B C)<br />3.
+            <em>justify-content</em> alignment to the main axis -> center:
+            <em>horisental</em> in center<br />4. <em>align-items</em> alignment
+            to the second axis -> center: <em>vertical</em> in center
+          </p>
+        </div>
+        <div class="container">
+          <div class="box">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+
+      <!-- Part2 -->
+      <section class="part2">
+        <div class="title">
+          <h1>Flex-Box (Part 2)-> Align-Content</h1>
+          <p>
+            1. If we have multiple lines in our flex comtainer
+            <em>align-content</em> works<br />2. The default behavior of flex
+            container:
+            <em>The items get smaller, so they can fit on one line</em>
+            (A ... L) in one line<br />3. with <em>flex-wrap</em> we can change
+            this behavior (items keep the original size and extera items wrap
+            onto second line)<br />4. with <em>align-content</em>: we can align
+            the entire content (all the lines) as a whole.
+          </p>
+        </div>
+        <div class="container">
+          <div class="box">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+          <div class="box">D</div>
+          <div class="box">E</div>
+          <div class="box">F</div>
+          <div class="box">G</div>
+          <div class="box">H</div>
+          <div class="box">I</div>
+          <div class="box">J</div>
+          <div class="box">K</div>
+          <div class="box">L</div>
+        </div>
+      </section>
+
+      <!-- Part3 -->
+      <section class="part3">
+        <div class="title">
+          <h1>Flex-Box (Part 3)-> Align-Self</h1>
+          <p>
+            1. If we want to change the alignment
+            <em>one of the elements</em> (move up or down -> A to the top)<br />2.
+            use the <em>align-self</em> property -> (override the value of
+            align-items property)<br />3. we apply aligin self property on a
+            <em>flex item</em> (A) and not a flex container
+          </p>
+        </div>
+        <div class="container">
+          <div class="box box-a">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+
+      <!-- Part4 -->
+      <section class="part4">
+        <div class="title">
+          <h1>Flex-Box (Part 4)-> Sizing-items</h1>
+          <p>
+            1. If we want to change the size of one or more elements<br />2. a-
+            <em>flex-basis</em> property, b- <em>flex-growth</em> property, c-
+            <em>flex-shrink</em> property<br />3. we apply this properties on a
+            <em>flex item</em> (A) and not a flex container
+          </p>
+        </div>
+        <div class="container">
+          <div class="box box-a">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+    </article>
+
+    <!-- Grid -->
+    <article id="grid">
+      <!-- Part1 -->
+      <section class="part1">
+        <div class="title">
+          <h1>Grid (Part 1)-> Defining a Grid</h1>
+          <p>
+            1. <em>Display: grid</em> (display property of container)<br />2.
+            <em>grid-template</em>(-rows | -columns): number & size of rows &
+            columns
+          </p>
+          <p>
+            3. <em>justify-items: </em>align the <em>elements</em> horizontally
+            within their <em>cell</em><br />4. <em>align-items: </em>align the
+            <em>elements</em> horizontally within their <em>cell</em><br />
+          </p>
+          <p>
+            5. <em>justify-content:</em> align the <em>grid</em> horizontally
+            within its container<br />6. <em>align-content:</em>align the
+            <em>grid</em> vertically within its container
+          </p>
+        </div>
+        <div class="container">
+          <div class="box grid-bg">A</div>
+          <div class="box grid-bg">B</div>
+          <div class="box grid-bg">C</div>
+          <div class="box grid-bg">D</div>
+          <div class="box grid-bg">E</div>
+          <div class="box grid-bg">F</div>
+        </div>
+      </section>
+
+      <!-- Part2 -->
+      <section class="part2">
+        <div class="title">
+          <h1>Grid (Part 2)-> Strech value & Gap</h1>
+          <p>
+            1. <em>justify-items:</em> default value is <em>strech</em><br />2.
+            <em>align-items: </em> default value is <em> strech</em><br />* If
+            we don't applay width & height to our items, they will strech to
+            fill the cell.*
+          </p>
+          <p>3. <em>gap:</em> apply a gap between rows & columns</p>
+        </div>
+        <div class="container">
+          <div class="grid-bg">A</div>
+          <div class="grid-bg">B</div>
+          <div class="grid-bg">C</div>
+          <div class="grid-bg">D</div>
+          <div class="grid-bg">E</div>
+          <div class="grid-bg">F</div>
+        </div>
+      </section>
+
+      <!-- Part3 -->
+      <section class="part3">
+        <div class="title">
+          <h1>
+            Grid (Part3)-> <em>fr</em> unit: no absolut value | Placing items
+          </h1>
+          <p>
+            <em>30fr</em> instead of <em>30%</em> -> Percentage of the available
+            free space (not of the width of the container)
+          </p>
+          <p>
+            <em>grid-area:</em> control where exactly a item should be placed<br />1.
+            set <em>grid-template-areas:</em> on the <em>container</em> (to
+            define areas: first row -> "header header")<br />2. give the item an
+            <em>extera class</em>(A)<br />3. set <em>grid-area</em> on
+            individual items (A -> header (cell 1 & 2))
+          </p>
+        </div>
+        <div class="container">
+          <div class="grid-bg box-a">A</div>
+          <div class="grid-bg">B</div>
+          <div class="grid-bg">C</div>
+          <div class="grid-bg box-d">D</div>
+        </div>
+      </section>
+    </article>
+
     <!-- hidden -->
-    <p class="first">first</p>
-    <p class="second">second</p>
+    <article id="hidden">
+      <div class="title">
+        <h1>Hidden</h1>
+        <p>
+          <em>visibility</em>: hidden; -> hides the element but
+          <em>keeps the reserved space</em>
+        </p>
+        <p>
+          <em>display</em>: none; -> hides the element as if it
+          <em>was never there</em>
+        </p>
+      </div>
+      <div class="container">
+        <p>first</p>
+        <p>second</p>
+        <p>third</p>
+      </div>
+    </article>
+
     <!-- media queries -->
-    <!-- .container-v5>.box-v5*2 to make a dive with class="container-v5" and insid it tow divs with class="box-v5" -->
-    <div class="container-v5">
-      <div class="box-v5">
+    <!-- .container>.box*2 to make a <div> with class="container" and insid it tow divs with class="box" -->
+
+    <article id="container-media-queries">
+      <div class="title">
+        <h1>
+          <em>Media Queries</em> -> responsive web site (different styles)
+        </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-          numquam, architecto nemo neque quia facere maxime voluptatem iusto est
-          nihil reprehenderit tempore ipsa pariatur dignissimos, aliquid
-          eligendi consectetur velit sequi?
+          1. start with <em>@media</em> roll<br />2. and then we type our
+          <em>query</em>(question) -> a quey can have multiple parts:<br />- -
+          a. type of the device: <em>screen</em> | <em>print</em><br />- - b.
+          after that we use the <em>and</em> operator and im <em>()</em> wirte a
+          condition<br />3. define styles that only applay in this condition
+        </p>
+        <p>@media <em>screen</em> and (min-width: 700px) {}</p>
+        <p>
+          @media <em>print</em> {} -> define styles that only applay to printer
         </p>
       </div>
-      <div class="box-v5">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          exercitationem adipisci dicta, quas nostrum, voluptatibus fuga quidem
-          atque voluptate maxime repudiandae dolores corrupti minima assumenda,
-          dolor blanditiis quaerat reiciendis enim!
-        </p>
+      <div class="container">
+        <div class="box-media-queries">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
+            numquam, architecto nemo neque quia facere maxime voluptatem iusto
+            est nihil reprehenderit tempore ipsa pariatur dignissimos, aliquid
+            eligendi consectetur velit sequi?
+          </p>
+        </div>
+        <div class="box-media-queries">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            exercitationem adipisci dicta, quas nostrum, voluptatibus fuga
+            quidem atque voluptate maxime repudiandae dolores corrupti minima
+            assumenda, dolor blanditiis quaerat reiciendis enim!
+          </p>
+        </div>
       </div>
-    </div>
-    <!-- exercise 1-V1-->
-    <div class="container-exercis-1-v1">
-      <ul class="navi-list-v1">
-        <li class="list-v1">About</li>
-        <li class="list-v1">Courses</li>
-        <li class="list-v1">Forum</li>
-        <li class="list-v1">Learning Paths</li>
-        <li class="list-v1">Contact</li>
-      </ul>
-    </div>
-    <!-- exercise 1-V2-->
-    <div class="container-nav-exercis-1-v2">
-      <nav>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Forum</a></li>
-          <li><a href="#">Learning Paths</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- exercise 2 -->
-    <div class="photo-gallery">
-      <img src="photo_gallery/img/1.jpg" alt="1" />
-      <img src="photo_gallery/img/2.jpg" class="img2" alt="2" />
-      <img src="photo_gallery/img/3.jpg" alt="3" />
-      <img src="photo_gallery/img/4.jpg" alt="4" />
-      <img src="photo_gallery/img/5.jpg" alt="5" />
-      <img src="photo_gallery/img/6.jpg" alt="6" />
-      <img src="photo_gallery/img/7.jpg" alt="7" />
-      <img src="photo_gallery/img/8.jpg" class="img8" alt="8" />
-      <img src="photo_gallery/img/9.jpg" class="img9" alt="9" />
-    </div>
+    </article>
   </body>
 </html>

@@ -19,18 +19,25 @@
       p {
         font-family: Arial, sans-serif;
       }
+      #user {
+        display: flex;
+        margin-top: -3rem;
+      }
       .profile-image {
         width: 5rem;
         height: 5rem;
-        float: left;
         margin-right: 1rem;
         object-fit: cover;
+        justify-content: left;
       }
 
+      #text {
+        justify-content: right;
+      }
       .username {
         font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 0;
+        margin: 0;
       }
 
       .message {
@@ -47,16 +54,22 @@
       }
 
       video {
-        width: 15rem;
+        width: 25rem;
         margin: 2rem -2.4rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: end;
+        margin: 10px 10px;
       }
 
       ul {
         list-style-type: none;
+        display: flex;
       }
 
       li {
-        float: right;
         padding-left: 1rem;
       }
 
@@ -84,11 +97,13 @@
           <li>Contact me</li>
         </ul>
       </nav>
-      <div>
+      <div id="user">
         <img src="img/avatar.png" class="profile-image" alt="avatar-photo" />
-        <p class="username">@mahtabmehrjoo</p>
-        <!-- wraping sth. -> select -> open command -> search wrap with Abbreviation -> type name of your element -> em -->
-        <p class="message">I love to be a <em>programmer</em></p>
+        <div id="text">
+          <p class="username">@mahtabmehrjoo</p>
+          <!-- wraping sth. -> select -> open command (ctr+shipt+p)-> search wrap with Abbreviation -> type name of your element -> em -->
+          <p class="message">I love to be a <em>programmer</em></p>
+        </div>
       </div>
     </header>
 
@@ -133,7 +148,7 @@
         >
       </article>
       <figure>
-        <video poster="img/loewenzahn.jpg" autoplay src="video/Dandelion.mp4">
+        <video poster="img/loewenzahn.jpg" src="video/Dandelion.mp4" controls>
           Your browser dosn#t support videos.
         </video>
       </figure>
@@ -173,9 +188,10 @@
           </tbody>
         </table>
       </article>
+
+      <div class="box">
+        <h1>Mahtab<br />Mehrjoo</h1>
+      </div>
     </main>
-    <div class="box">
-      <h1>Mahtab<br />Mehrjoo</h1>
-    </div>
   </body>
 </html>

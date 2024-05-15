@@ -1,0 +1,247 @@
+/* General */
+body {
+  height: 200vh;
+  width: 70vw;
+  margin: 0 auto 0;
+  font-size: 18px;
+}
+
+.title {
+border: 3px solid lightgray;
+padding: 10px 0 10px 10px;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bolder;
+margin: 6rem 0 0;
+}
+
+.title h1 {
+  font-size: 1.2rem;
+}
+
+.title p {
+  font-size: 1rem;
+  padding-left: 3rem;
+}
+
+.title em {
+  color: tomato;
+  font-style: normal;
+}
+
+.container {
+  border: 3px solid lightgray;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* Overflow */
+#overflow p {
+  width: 150px;
+  height: 100px;
+  padding: 3px;
+  margin-left: 10px;
+  border: 6px solid gold;
+  overflow: hidden; /* The extera content will be hidden */
+  overflow: auto; /* If the overflow happen, the extera content will be hidden, but you can scroll and see it */
+}
+
+/* absolut & relative position */
+#absolut-relative-position .box-one {
+  background: gold;
+}
+#absolut-relative-position .box-two {
+  background: tomato;
+  position: relative; /* by default the position of all elements is static*/
+  left: 5rem;
+}
+
+#absolut-relative-position .box-three {
+  background: dodgerblue;
+}
+
+#absolut-relative-position .container {
+  position: relative; /* beacuse we set the position of an element absolute */
+} 
+#absolut-relative-position .box-four {
+  background: rgb(70, 70, 70);
+  position: absolute; /**/
+  right: 0;
+  bottom: 0;
+}
+
+/* Fixed-position */
+#fixed-position div {
+  background: tomato;
+  position: fixed; /*position the element relative to the viewport */
+  left: 5rem;      /* another method to define the size of an element*/ 
+  right: 5rem;
+  width: auto;
+  top: 0; 
+  z-index: 99; /* z axis represent depth*/
+  overflow: auto;
+}
+
+#fixed-position p {
+  padding-left: 11rem;
+  color: white;
+}
+
+#fixed-position p em {
+  color: rgb(35, 35, 35);
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Flex box -> Very very Important */
+#flex-box .box {
+  background: gold;
+  margin: 1rem;
+}
+
+/*Part1*/
+#flex-box .part1 .container {
+  height: 30vh;
+  display: flex; /* first step*/
+  flex-direction: row;  /*default direction, we don't nedd to write it, if it should be horizental*/
+  justify-content: center; /* alignment main axis */
+  align-items: center;     /* alignment second axis */
+}
+
+/*Part2*/
+#flex-box .part2 .container {
+  height: 50vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; /*The items keep the original size and extera items wrap onto second line */
+  align-content: center; /*align the entire content (all the lines) as a whole.*/
+  overflow: auto;
+}
+
+#flex-box .part2 .box {
+  margin-left: 3rem;
+}
+
+/*Part3*/
+#flex-box .part3 .container {
+  height: 40vh;
+  display: flex; 
+  flex-direction: row;  
+  justify-content: center; 
+  align-items: center;     
+}
+
+/* Very very Important. Overwrite align-items */
+#flex-box .part3 .box-a {
+  align-self: flex-start; /*change the alignment one of the elements (up or down)*/
+}
+
+/*Part4*/
+#flex-box .part4 .container {
+  height: 30vh;
+  display: flex; 
+  flex-direction: row;  
+  justify-content: center; 
+  align-items: center;     
+}
+
+#flex-box .part4 .box-A {
+  flex-basis: 10rem;
+  /* flex-grow: ; */
+  /* flex-shrink: ; */
+}
+
+/* Very very Important. grid */
+.grid-bg {
+  background: gold;
+}
+
+/*Part1*/
+#grid .part1 .container {
+  display: grid;
+  grid-template-rows: repeat(3,10rem); /*10rem 10rem 10rem*/
+  grid-template-columns: repeat(2, 10rem); /*-> 10rem 10rem*/
+  justify-items: center; /*for element in grid */
+  align-items: center; /*for element in grid */
+  justify-content: center; /*for grid in container */
+  align-content: center; /*for grid in container */
+}
+
+/*Part2*/
+#grid .part2 .container {
+  display: grid;
+  grid-template-rows: repeat(3,10rem);
+  grid-template-columns: repeat(2, 10rem); 
+  /*justify-items: stretch; */ /*default value */
+  /*align-items: stretch; *//*default value */
+  gap: 1rem;
+  justify-content: center; 
+  align-content: center;
+}
+
+/*Part3*/
+#grid .part3 .container {
+  display: grid;
+  /*grid-template: rows / columns*/
+  grid-template: 5rem auto 5rem / 30fr 70fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer"
+    /* ".       footer" */ /*if we want to have an empty cell*/;
+  gap: 1rem;
+  height: 50vh;
+}
+
+#grid .part3 .box-a {
+  /* grid-column: 1 / span 2; */ /*if we want to use number of lines or column */
+  grid-area: header; /*without "" */
+}
+#grid .part3 .box-d {
+  /* grid-column: 1 / span 2; */ /*if we want to use number of lines or column */
+  grid-area: footer;
+}
+
+
+
+
+/* hiding element */
+#hidden .container p:first-child {
+  visibility: hidden; /*hides the element but its place stay*/
+}
+#hidden .container p:last-child{
+  display: none; /*hides the element as if it was never there*/
+}
+
+/* media queries */
+#container-media-queries .container {
+  display: flex;
+  flex-direction: column;
+}
+.box-media-queries {
+  background: gold;
+  color: rgb(30, 30, 30);
+  padding: 1rem;
+  margin: 1rem;
+}
+/* psudo class selector: target the second items with the class of .box-media-queries */
+.box-media-queries:nth-of-type(2) {
+  background: goldenrod;
+}
+
+@media screen and (min-width: 700px) {
+  #container-media-queries .container {
+    flex-direction: row;
+  }
+}
+
+/* setting styles that only apply to printers */
+@media print {
+  body {
+    font-size: 12pt;
+    margin: 5mm;
+  }
+}
