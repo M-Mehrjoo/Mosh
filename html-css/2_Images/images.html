@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images</title>
+    <link rel="stylesheet" href="/html-css/normalize.css" />
+    <link rel="stylesheet" href="images.css" />
+    <script
+      src="https://kit.fontawesome.com/907cd2106b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Content | BG Images -->
+    <section id="content-bg-images">
+      <div class="title">
+        <h1>Content | Background Images</h1>
+        <div>
+          <p>
+            content images -> *<em>html</em> -> &lt;img src=" " alt=" "/&gt;;<br />*
+            If content images be used for <em>decoration</em>, we should set the
+            <em>alt attribute to an empty string</em>.
+          </p>
+          <p>
+            background images -> *<em>css</em> -> {background: url();}<br />
+            - - <em>background-repeat</em>: no-repeat;<br />
+            - - <em>background-size</em>: cover;<br />
+            - - <em>background-attachment</em>: fixed; <em>-></em> BG stay
+            fixed: if you scroll bg dosn't move, but countent moves<br />
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/meal.webp" alt="" />
+        <div class="bg">
+          <h1>Heading</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS Sprites -->
+    <section id="css-sprites">
+      <div class="title">
+        <h1>CSS Sprites</h1>
+        <div>
+          <p>
+            1.
+            <a href="https://cssspritestool.com/" target="_blank">css sprits</a>
+            -> <em> combine all the images in to a single image </em><br />*and
+            then get that single image (from server) using
+            <em>a single HTTP request</em>
+          </p>
+          <p>2. download the file and put new image in your img folder</p>
+          <p>
+            3. copy all the classes from new css file and put them in your css
+            file -> update the urls if necessary
+          </p>
+          <p>
+            4. <em>&lt;span class=" "&gt;&lt;/span&gt;</em> -> put the class
+            name of image that you need ( that's a background-image)
+          </p>
+          <p>
+            **
+            <a href="https://www.flaticon.com/" target="_blank">flaticon</a> ->
+            free icons and stickers
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <span class="css-sprite-landing"></span>
+        <span class="css-sprite-rocketship"></span>
+        <span class="css-sprite-saturn"></span>
+        <span class="css-sprite-ufo"></span>
+        <span class="css-sprite-dishes"></span>
+      </div>
+    </section>
+
+    <!-- Clipping -->
+    <section id="clipping">
+      <div class="title">
+        <h1>Clipping</h1>
+        <div>
+          <p>1. add the image you want to html and give it a class</p>
+          <p>
+            2.
+            <a href="https://bennettfeely.com/clippy/" target="_blank"
+              >css clipping</a
+            >
+            -> copy css code of the clipping-form that you like
+          </p>
+          <p>3. add the css code (clip-path) to the class in your stylesheet</p>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/meal.webp" alt="" class="clipping" />
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section id="filters">
+      <div class="title">
+        <h1>Filters</h1>
+        <div>
+          <p>add filter property -> { filter: ; }</p>
+          <p>
+            **<a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter?retiredLocale=de"
+              target="_blank"
+              >demo of filters</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/meal.webp" alt="salmone meal" class="filters" />
+      </div>
+    </section>
+
+    <!-- Supporting High-density Screens -->
+    <section id="high-density">
+      <div class="title">
+        <h1>
+          Supporting High-density Screens (<em>for fixed-size images</em>)
+        </h1>
+        <div>
+          <p><em>physical resolution</em> -> the qualitiy of a device</p>
+          <p>
+            <em>logical resolution</em> -> the size that we see on a screen<br />*CSS
+            is always based on logical resolution
+          </p>
+          <p><em>DPR</em> ->the ratio of physical to logical pixels</p>
+          <p>
+            &lt;img<br />- src="images/....webp"<br />- alt="..."<br />
+            - <em> srcset=</em>"images/....webp <em>1x</em>, images/...@2x.webp
+            <em>2x</em>" <br />/&gt;
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <figure>
+          <img
+            src="images/meal.webp"
+            alt="salmone meal"
+            class="high-density"
+            srcset="images/meal.webp 1x, images/meal@2x.webp 2x"
+          />
+          <figcaption>@1x</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/meal@2x.webp"
+            alt="salmone meal"
+            class="high-density"
+          />
+          <figcaption>@2x</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Resolution Switching-1 -->
+    <section id="resolution-switching-1">
+      <div class="title">
+        <h1>Resolution Switching-1 (flexible-sized images)</h1>
+        <div>
+          <p><em>different screen sizes</em> -> different qualitiy of image</p>
+          <p>
+            provide 3 different sizes <em>S, M, L</em><br />&lt;img<br />-
+            src="images/....jpg"<br />- alt="..."<br />-
+            <em> srcset=</em>"images/....jpg <em>400w</em>, images/...@2x.jpg
+            <em>800w</em>, images/...@3x.jpg <em>1200w</em>" <br />/&gt;
+          </p>
+          <p>
+            the best way to
+            <a href="https://www.responsivebreakpoints.com/" target="_blank"
+              >generate different sizes of an image</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <figure>
+          <img
+            src="images/meal.jpg"
+            alt="salmone meal"
+            class="resolution-switching-1"
+            srcset="
+              images/meal.jpg     800w,
+              images/meal@2x.jpg 1200w,
+              images/meal@3x.jpg 1800w
+            "
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Resolution Switching-2 -->
+    <section id="resolution-switching-2">
+      <div class="title">
+        <h1>Resolution Switching-2 (flexible-sized images)</h1>
+        <div>
+          <p>
+            <em>sizes=" "</em> html attribute ->
+            <em>image in different sizes</em> -> according to different screen
+            sizes
+          </p>
+          <p>
+            first should set <em>srcset=" "</em> attribute<br />then<br />
+            <em>sizes="</em><br />- (max-width: 900px) 70vw,<br />- (max-width:
+            1500px) 50vw,<br />- 30vw<br /><em>"</em>
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <figure>
+          <img
+            src="images/meal.jpg"
+            alt="salmone meal"
+            srcset="
+              images/meal.webp     400w,
+              images/meal@2x.webp  800w,
+              images/meal@3x.webp 1200w
+            "
+            sizes="
+              (max-width: 900px) 70vw,
+              (max-width: 1500px) 50vw,
+              30vw
+            "
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Picture element(type attribute) -->
+    <section id="picture-element">
+      <div class="title">
+        <h1>
+          Picture element (<em>type</em> attribute) -> Supporting Modern Image
+          Formats
+        </h1>
+        <div>
+          <p>
+            &lt;<em>picture</em>&gt;<br />- &lt;source
+            <em>type</em>="image/webp" srcset=" "&gt;<br />- &lt;source
+            <em>type</em>="image/jpeg" srcset=" "&gt;<br />- &lt;img src=" "
+            alt=" "&gt; <em>-></em> should always have an image element:
+            <em>- a)</em> to type the altervative text <em>- b)</em> the image
+            is not shown<br />
+            &lt;/<em>picture</em>&gt;
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="images/meal.webp" />
+            <source type="image/jpeg" srcset="images/meal.jpg" />
+            <img src="images/meal.webp" alt="salmone meal" />
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Picture element-media (media attribute) -->
+    <section id="picture-element">
+      <div class="title">
+        <h1>Picture element (<em>media</em> attribute) -> Art Direction</h1>
+        <div>
+          <p>
+            &lt;<em>picture</em>&gt;<br />- &lt;source
+            <em>media</em>="<em>(</em>max-width: ...px<em>)</em>" srcset="
+            "&gt;<br />- &lt;source <em>media</em>="<em>(</em>max-width:
+            ...px<em>)</em>" srcset=" "&gt;<br />- &lt;img src=" " alt=" "&gt;
+            <em>-></em> should always have an image element: <em>- a)</em> to
+            type the altervative text <em>- b)</em> the image is not shown<br />
+            &lt;/<em>picture</em>&gt;
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <figure>
+          <picture>
+            <source
+              media="(max-width: 1690px)"
+              srcset="images/meal-cropped.jpg"
+            />
+            <source media="(min-width: 1601px)" srcset="images/meal.webp" />
+            <img src="images/meal.webp" alt="salmone meal" />
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SVG Backgrounds -->
+    <section>
+      <div class="title">
+        <h1>SVG Backgrounds</h1>
+        <div>
+          <p>
+            <a href="https://www.svgbackgrounds.com/" target="_blank"
+              >SVG backgrounds</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Font Awesome -->
+    <section id="font-awesome">
+      <div class="title">
+        <h1>Font Awesome</h1>
+        <div>
+          <p>
+            <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+            -> to display icons
+          </p>
+          <p>
+            1. add the kid to head of html file <br />2. find the icon that you
+            want<br />3. copy the code and place at the html file
+          </p>
+          <p>
+            <em>&lt;i class="fa-solid fa-user-secret"&gt;&lt;/i&gt;</em><br />-
+            i -> icon | but we can use a span tag<br />- class1 -> the style of
+            icon<br />- class2 -> name of icon
+          </p>
+          <p>
+            to change the color or size of icon<br />
+            1. add different classes -> <em>fa-2x</em> -> the size will be
+            twice<br />2. define style
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <span class="fa-solid fa-user-secret fa-2x"></span>
+        <span class="fa-solid fa-bell"></span>
+        <span class="fa-solid fa-fish"></span>
+      </div>
+    </section>
+  </body>
+</html>

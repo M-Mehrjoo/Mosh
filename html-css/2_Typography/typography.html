@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography</title>
+
+    <!-- Google Fonts (Font Services) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=optional"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/html-css/normalize.css" />
+    <link rel="stylesheet" href="typography.css" />
+  </head>
+  <body>
+    <!-- Styling Fonts -->
+    <section id="styling-fonts">
+      <div class="title">
+        <h1>Embedding Web Fonts (using a custom fonts)</h1>
+        <p>
+          The default color for the body text is pure black (#000). It's best to
+          change it to <em>dark grey</em>.
+        </p>
+        <p>
+          Font files come in different formats: TTF, OTF, EOT, <em>WOFF</em> and
+          <em>WOFF 2.0</em>
+        </p>
+        <p>
+          We can convert any font file to a WOFF file on
+
+          <a href="https://www.fontsquirrel.com/" target="_blank"
+            >fontsquirrel.com</a
+          >.<br />- - Convert the fonts<br />- - Copy the fonts in to our
+          Project<br />- - Copy the rules from font-stylesheet.css file and put
+          them at the <em>top of our css</em> (update url)
+        </p>
+      </div>
+    </section>
+
+    <!-- Google Fonts (Font Services) -->
+    <section id="google-fonts">
+      <div class="title">
+        <h1>Google Fonts (Font Services)</h1>
+        <p>
+          Select a font from
+          <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
+        </p>
+        <p>Copy links and put them in the <em>&lt;head&gt; of your html</em></p>
+        <p>We can <em>edit the url</em> any time.</p>
+      </div>
+    </section>
+
+    <!-- System Font Stack -->
+    <section>
+      <div class="title">
+        <h1>System Font Stack</h1>
+        <p>
+          1. The system font stack -> the <em>default font</em> used by each
+          oprating system (windows, android, mac)<br />2. the font looks
+          different on different devices.<br />3. using system font stack make
+          <em>the best user exprience</em>.
+        </p>
+        <p>font-family: <em>system-ui,</em></p>
+      </div>
+    </section>
+
+    <!-- Sizing Fonts -->
+    <section>
+      <div class="title">
+        <h1>Sizing Fonts</h1>
+        <p>html { <em>font-size: 62.5%</em>; } -> 62.5% of 16px = 10px</p>
+        <p>
+          <a href="https://typescale.com/" target="_blank"
+            >www.type-scale.com</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Vertical & Horizontal Spacing -->
+    <section>
+      <div class="title">
+        <h1>Vertical & Horizontal Spacing</h1>
+        <p>
+          <em>line-height: 1.5</em>; (don't use units) -> spacing between lines
+        </p>
+        <p>
+          <em>letter-spacing: </em> -> space between letters<br />
+          <em>word-spacing:</em> -> space between words
+        </p>
+        <p>
+          Ideal line length -> <em>50 - 70 chatacters</em><br />p {
+          <em> width: 50ch </em>; } -> 50 ch = 50 zero ~ 70 character
+        </p>
+      </div>
+    </section>
+
+    <!-- Formating Text -->
+    <section id="formating-text">
+      <div class="title">
+        <h1>Formating Text</h1>
+        <p>
+          <em>text-align: center</em>; -> align the text Horizontaly<br />
+          <em>text-indent:</em> -> space at the start of the line (
+          <em>*</em> p+p { } -> the spacing starts from second paragraph
+          <em>*</em> )<br /><em>text-decoration:</em> -> line-through -, ...<br /><em
+            >text-transform:</em
+          >
+          -> lowercase, uppercase, ...
+        </p>
+        <p>
+          enforce a limit on the paragraph and truncate the text (one line)
+          -><br />1- set a fixed width<br />2- <em>white-space: nowrap</em>; ->
+          for controlling wrapping;<br />3- overflow: hidden;<br />4-
+          text-overflow: ellipsis;
+        </p>
+        <p><em>column-count:</em> -> creating multi colum text</p>
+      </div>
+      <div class="container formating-text">
+        <p id="part-1">
+          <span class="first-word">Lorem ipsum</span> dolor sit amet consectetur
+          adipisicing elit. Iusto illum animi rem quas aliquam! Vero repellendus
+          dolorem obcaecati illo fugit. Necessitatibus labore reiciendis non
+          quae architecto expedita adipisci quasi assumenda accusantium ullam
+          deserunt, rem laborum enim ratione, aliquid ducimus error.
+        </p>
+        <p id="truncate">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illum
+          animi rem quas aliquam! Vero repellendus dolorem obcaecati illo fugit.
+          Necessitatibus labore reiciendis non quae architecto expedita adipisci
+          quasi assumenda accusantium ullam deserunt, rem laborum enim ratione,
+          aliquid ducimus error.
+        </p>
+        <p id="line-clamp">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illum
+          animi rem quas aliquam! Vero repellendus dolorem obcaecati illo fugit.
+          Necessitatibus labore reiciendis non quae architecto expedita adipisci
+          quasi assumenda accusantium ullam deserunt, rem laborum enim ratione,
+          aliquid ducimus error.
+        </p>
+        <p id="column-count">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+          necessitatibus culpa ex eligendi eos, excepturi rem ipsam, quibusdam
+          error soluta enim fugit officiis aspernatur unde consequatur nulla
+          veritatis voluptates! Quisquam repellendus distinctio eius architecto
+          quidem, eum dolorum quibusdam! Numquam quia omnis ipsa voluptatem,
+          quos commodi modi assumenda ipsum temporibus obcaecati inventore quam
+          laudantium, illo rem, exercitationem alias ea. Tempora aspernatur
+          labore repellat amet laudantium in!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+/* General */
+
+/* Styling Fonts */
+  /* @font-face {
+    font-family: 'opensans';
+    src: url('/html-css/_fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('/html-css/_fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'opensans';
+    src: url('/html-css/_fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('/html-css/_fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: optional;
+} */
+
+body {
+    height: 200vh;
+    width: 70vw;
+    margin: 0 auto 0;
+
+    /* Google Fonts (Font Services) */
+    /* font-family: "Open Sans" ,Arial, Helvetica, sans-serif; */
+
+    /* System Font Stack */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    font-size: 18px;
+  }
+  p {
+    color: #333;
+  }
+  
+  
+  .title {
+  border: 3px solid lightgray;
+  padding: 10px 0 10px 10px;
+  margin: 6rem 0 0;
+  }
+  
+  .title h1 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+  
+  .title p {
+    font-size: 1rem;
+    padding-left: 3rem;
+    line-height: 1.5; /*dont't use units */
+  }
+  
+  .title em {
+    color: tomato;
+    font-style: normal;
+  }
+  
+  .container {
+    border: 3px solid lightgray;
+  }
+  
+a {
+    color: tomato;
+  }
+
+
+  /* Formating Text */
+
+  /* generall */
+  #part-1, #truncate, #line-clamp, #column-count {
+    line-height: 1.5;
+    border: 3px solid gold; 
+  }
+
+  /* center alignment text-containers*/
+  #formating-text .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* part-1: align the text Horizontaly */
+  #part-1 {
+    text-align: center;   /* align the text Horizontaly */
+    /* text-indent: ; */
+    /* text-transform: ; */   
+  }
+
+  .first-word {
+    text-decoration: line-through; 
+  }
+
+
+  /* enforce a limit on the paragraph and truncate the text*/
+
+  /* one line */
+  #truncate {
+    width: 50ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 3;
+  }
+
+  /* more lines */
+  #line-clamp {
+    width: 50ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+
+  /* creating multi colum text */
+  #column-count {
+    width: 100ch;
+    column-count: 2;
+    column-gap: 2rem;
+    /* column-rule: 3px dotted gold; */
+  }

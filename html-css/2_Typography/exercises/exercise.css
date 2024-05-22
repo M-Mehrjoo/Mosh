@@ -1,0 +1,90 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Lato ,Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    padding: 1rem;
+}
+
+#container {
+    width: 75vw;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    letter-spacing: -.5px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: black;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+header p {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+img {
+    width: 100%;
+    /* object-fit: cover; */ /* not nessesery */
+}
+
+#ingredients {
+display: flex;
+flex-direction: column;
+}
+
+li {
+    font-size: 1.8rem;
+}
+
+ol li {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 945px) {
+    #container {
+        width: 62vw;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 4rem;
+    }
+    
+    h3 {
+        font-size: 3rem;
+    }
+    header p {
+        font-size: 2.5rem;
+    }
+
+    #ingredients {
+        display: flex;
+        flex-direction: row;
+        }
+        #kale {
+            margin-left: 15%;
+        }
+
+}
