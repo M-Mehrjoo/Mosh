@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/html-css/normalize.css" />
+    <link rel="stylesheet" href="form_1-basic.css" />
+    <title>Form_1</title>
+  </head>
+  <body>
+    <!-- Creating a Basic Form -->
+    <section id="basic-form">
+      <div class="title">
+        <h1>Creating a Basic Form</h1>
+        <div>
+          <p>
+            &lt;form action=" "&gt;<br />- &lt;<em>label</em>
+            for="..."&gt;...&lt;/<em>label</em>&gt;<br />- &lt;<em>input</em>
+            id="..." <em>type</em>="text" /&gt;<br />&lt;/form&gt;
+          </p>
+          <p>
+            <em>label</em> element <em>-></em> the name of the data that comes
+            in input box
+          </p>
+          <p><em>input</em> element <em>-></em> to accept data from the user</p>
+          <p>
+            <em>type</em> attribute <em>-></em> determines the type of the input
+            and can be:<br />- text | - password | - email | - checkbox | -
+            radio | - range | - date | - file | etc.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <form>
+          <div class="basic-style">
+            <label for="name-basic">Name</label>
+            <input id="name-basic" type="text" />
+          </div>
+          <div class="basic-style">
+            <label for="email-basic">Email</label>
+            <input id="email-basic" type="email" />
+          </div>
+          <div class="basic-style">
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Styling Forms -->
+    <section id="styling-forms">
+      <div class="title">
+        <h1>Styling Forms</h1>
+        <div>
+          <p>put input below its lable <em>-></em> lable {display: block}</p>
+          <p>
+            to avoid applying the styles to all the input types <em>-></em> use
+            attribute selector <em>-></em> input<em>[</em>type="..."<em>]</em> {
+            }
+          </p>
+          <p>
+            to style our input in focus state <em>-></em> use psudo class
+            selector <em>-></em> input[type="..."]<em>:focus</em> { }
+          </p>
+          <p>
+            * <em>outline: 0</em>; <em>-></em> to remove the border that be
+            applyed by default around input-box or buttons
+          </p>
+          <p>
+            * <em>transition:</em> border-color 0.2s, box-shadow 0.2s;
+            <em>-></em> not disappear quickly
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" />
+          </div>
+          <button type="submit">Register</button>
+          <button type="reset">clear</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CSS Frameworks -->
+    <section id="css-frameworks">
+      <div class="title">
+        <h1>CSS Frameworks -> a library of CSS code</h1>
+        <div>
+          <p>be used to save time by styling forms</p>
+          <p>
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a
+            ><br /><a href="https://milligram.io/" target="_blank">Milligram</a
+            ><br />Foundation<br />Semantic UI<br />...
+          </p>
+          <p>
+            *
+            <a href="form_2-frameworks/" target="_blank"
+              >see framework folder</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

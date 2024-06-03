@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/html-css/normalize.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <title>Bootsrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- form with stayle form framework [bootsrap] -->
+    <section>
+      <div class="title">
+        <h1>CSS Frameworks -> Bootstrap</h1>
+        <div>
+          <p>
+            1. go to
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+          </p>
+          <p>2. copy the link and add it in head of html file</p>
+          <p>
+            3. to give bootstrap styles to our element -> should
+            <em>apply some classes</em> on the html elements<br /><em>- - ></em>
+            go to
+            <a
+              href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+              target="_blank"
+              >Docs</a
+            >
+            on bootstrap page<br /><em>- - ></em> select the section you need.
+            e.g <em>Forms</em><br /><em>- - ></em> applay the
+            <em>class</em> that you need to your html element
+          </p>
+          <p>
+            <em>*</em> a roblem with Bootstrap <em>-></em> you have to remember
+            so many utility classes
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="w-25" action="">
+        <div class="mb-3">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control" id="name" type="text" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" id="email" type="email" />
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-secondary" type="reset">clear</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_3</title>
+    <link rel="stylesheet" href="/html-css/normalize.css">
+    <link rel="stylesheet" href="form_3.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+  />
+</head>
+<body>
+<!-- Text Fields --> 
+<selection>
+  <div class="title">
+    <h1>Text Fields</h1>
+    <p><em>Text Fields</em></p>
+    <p>
+      <em>- a) input elements-></em> be used to <strong>accept data from the user</strong><br>- has different types -> &lt;input <em>type</em>="..." /&gt;<br>- - <strong>text</strong><br>- - <strong>number</strong> -> only accept numbers<br>- - <strong>password</strong><br>- - <strong>date</strong><br>- - <strong>email</strong> -> only accept emails
+    </p>
+    <p>* <strong>checkbox </strong> | <strong>radio</strong> | <strong>range</strong> | <strong>file</strong> | <strong>hidden</strong> -> other types of input element</p>
+    <p>
+      - b) <em>textarea element</em> -> <strong>to type multiple lines of text</strong> -> &lt;<em>textarea</em> placeholder="..."&gt;&lt;/<em>textarea</em>&gt;</em><br>- - it has different attributes -> - <strong>name</strong> (send to server), - <strong>id</strong> (for lable), - cols, - rows<br>- - * <em>stop resizing</em> textarea box -> css ->  textarea { resize: none; }
+    </p>
+    <p>
+      different important <strong>atteibutes</strong> of input & textarea fields<br>- <em>value</em> -> to fill an input field automatically -> e.g. <em>email</em><br>- - for textarea we should put value in between the tags -> &lt;textarea&gt;<em>...</em>&lt;/textarea&gt;<br>- <em>placeholder</em> -> e.g. <em>comment</em> -> <strong>it can be used insted of label</strong><br>- <em>read only</em> -> can not be change but will be sent to server<br>- <em>disabled</em> -> will not be sent to server<br>- <em>maxlength</em> -> e.g. <em>password</em><br>- <em>autofocus</em> -> The first field gets focus automatically -> e.g. <em>name</em>
+    </p>
+  </div>
+
+  <div class="container">
+    <form action="">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" autofocus />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" value="mtb.mehrjoo@gmail.com" />
+      </div>
+      <div>
+        <label for="number">Number</label>
+        <input id="number" type="number" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" maxlength="9" />
+      </div>
+      <div>
+        <label for="date">Date</label>
+        <input id="date" type="date" />
+      </div>
+      <button type="submit">Register</button>
+      <button type="reset">clear</button>
+      
+      <!--  name=""cols="30" rows="10" Other attributes for textarea, but we don´t need them, becase make no change -->
+      <!-- We can use the "placeholder attribute" insted of label  -->
+      <!-- The value attribute dosen´t work for textarea. We schould write our text between <><>. -->
+      <textarea placeholder="Comment"></textarea>
+    </form>
+  </div>
+</selection>
+
+<!-- Data Lists : The user can write any other text,too-->
+<section>
+  <div class="title">
+    <h1>Data Lists -> suggestion</h1>
+    <p>1. add a text field -> <em>&lt;input type="text" /&gt;</em></p>
+    <p>2. add a <strong>datalist</strong> element -> <em>&lt;datalist&gt; ... &lt;datalist /&gt;</em></p>
+    <p>3. inside of datalist element add some <strong>options</strong> -> <em>&lt;option&gt; ... &lt;option /&gt;</em> -> e.g. name of countries</p>
+    <p>
+      4. link data list to the input field.<br>- - a) give the data list an <strong>id</strong> -> &lt;datalist <em>id="..."</em>&gt;<br>- - add <strong>list</strong> attribute to input element -> &lt;input type="text" <em>list="..."</em> /&gt;
+    </p>
+    <p>5. <strong>data-value</strong> -> send the <strong>value</strong> of selected part to the server -> &lt;option <em>data-value</em>="..."&gt;</p>
+  </div>
+  <div class="container">
+    <form>
+      <input type="text" list="countries"/>
+      <datalist id="countries">
+        <option data-value="1">Canada</option>
+        <!--Use "data-value" instead of value -->
+        <option>Germany</option>
+        <option>Japan</option>
+      </datalist>
+    </form>
+  </div>
+</section>
+
+<!-- Drop-down Lists : The user can not write any other text -->
+<section>
+  <div class="title">
+    <h1>Drop-down Lists</h1>
+    <p>1. add <strong>select</strong> element to the form -> <em>&lt;select&gt; ... &lt;select /&gt;</em></p>
+    <p>2. inside of select element add some <strong>options</strong> -> <em>&lt;option&gt; ... &lt;option /&gt;</em></p>
+    <p>3. to make the drop-down list optional -> leave the <strong>value</strong> of first option empty</p>
+    <p>
+      - - * to be seleted an option bei default -> add <strong>selected</strong> attribute to the option -> &lt;option value=" " <em>selected</em>&gt;...&lt;/option&gt;
+    </p>
+    <p>
+      - - * allow to select multiple options -> add <strong>multiple</strong> attribute to <strong>select</strong> element -> &lt;select <em>multiple</em>&gt;...&lt;/select&gt;
+    </p>
+    <p>
+      - - * to categorize the options -> use <strong>optgroup</strong> element -> <em>&lt;optgroup&gt;...&lt;/optgroup&gt;</em><br> - - * each <em>optgroup</em> should have a <strong>label</strong> -> <em>&lt;optgroup label="..."&gt;</em>
+    </p>
+  </div>
+    <div class="container">
+      <form>
+        <select>
+          <!-- we can allow the users to select multiple options: Apply "multiple" atteibutes on select element -->
+          <option value=""></option>
+          <optgroup label="Front-end Courses">
+            <option value="1">HTML</option>
+            <option value="2">CSS</option>
+            <option value="3">JavaScript</option>
+          </optgroup>
+          <optgroup label="Back-end Courses">
+            <option value="1">Node.js</option>
+            <option value="2">ASP.NET</option>
+            <option value="3">Java</option>
+          </optgroup>
+          <option value="" selected></option>
+        </select>
+      </form>
+      <form>
+        <select >
+          <option value="1" selected>Aaron</option>
+          <option value="2">Hanna</option>
+        </select>
+      </form>
+      <form>
+        <select multiple>
+          <option value="1">Nojan</option>
+          <option value="2">Mahtab</option>
+        </select>
+      </form>       
+    </div>
+</section>
+
+<!-- Check Boxes -->
+  <section>
+    <div class="title">
+      <h1>Check Boxes : a type of input</h1>
+      <p>1. add input element -> <em>&lt;input type="..." id="..." /&gt;</em></p>
+      <p>2. set the type attributet to <strong>checkbox</strong> -> &lt;input type="<em>checkbox</em>" id="..." /&gt;</p>
+      <p>3. need a <strong>lable</strong> element right after that -> <em>&lt;label for="..."&gt;...&lt;/label&gt;</em></p>
+      <p>4. <strong>link</strong> label with input -> <em>id (input) = for (label)</em></p>
+      <p>5. add <strong>class="label-inline"</strong> to lable element -> <strong>label</strong> is bei default a <strong>block level</strong> element</p>
+    </div>
+    <div class="container">
+      <form>
+        <div>
+          <input type="checkbox" id="front-end" checked/>
+          <label class="label-inline" for="front-end">Front-end</label>
+        </div>
+
+        <div >
+          <input type="checkbox" id="back-end" />
+          <label class="label-inline" for="back-end">Back-end</label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<!-- Radio Buttons -->
+<section>
+  <div class="title">
+    <h1>Radio Buttons</h1>
+      <p>1. add input element -> <em>&lt;input type="..." name="..." id="..." /&gt;</em></p>
+      <p>2. set the type attributet to <strong>radio</strong> -> &lt;input type="<em>radio</em>" name="..." id="..." /&gt;</p>
+      <p>3. <strong>name</strong> attributet to grouping radio buttons -> &lt;input type="radio" <em>name</em>="..." /&gt; -> name="gender"</p>
+      <p>4. need a <strong>lable</strong> element right after that -> <em>&lt;label for="..."&gt;...&lt;/label&gt;</em></p>
+      <p>5. <strong>link</strong> label with input -> <em>id (input) = for (label)</em></p>
+      <p>6. add <strong>class="label-inline"</strong> to lable element -> <strong>label</strong> is bei default a <strong>block level</strong> element</p>
+  </div>
+  <div class="container">
+    <form action="">
+      <div>
+        <input type="radio" name="gender" id="male" />
+        <label class="label-inline" for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" id="female" checked/>
+        <label class="label-inline" for="female">Female</label>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Sliders -->
+<section>
+  <div class="title">
+    <h1>Sliders (range selectors)</h1>
+    <p>1. add input element -> <em>&lt;input type="..." /&gt;</em></p>
+    <p>2. set the type attributet to <strong>range</strong> -> &lt;input type="<em>range</em>" min="..." max="..." /&gt;</p>
+    <p>3. set <strong>min</strong> attributet to 0 and <strong>max</strong> to 100  -> &lt;input type="range" <em>min="0" max="100"</em> /&gt;</p>
+  </div>
+  <div class="container">
+    <form>
+      <input type="range" min="0" max="100" />
+    </form>  
+  </div>
+</section>
+
+<!-- File Inputs -->
+<section>
+  <div class="title">
+    <h1>File Inputs</h1>
+    <p>1. add input element -> <em>&lt;input type="..." /&gt;</em></p>
+    <p>2. set the type attributet to <strong>file</strong> -> &lt;input type="<em>file</em>" /&gt;</p>
+
+    <p>* <strong>multiple</strong> attribute -> the user can select multiple files -> &lt;input type="file" <em>multiple</em> /&gt;<br>* <strong>accept</strong> attribute -> which keind of files -> &lt;input type="file" <em>accept</em>=".jpg, .png" /&gt;</p>
+  </div>
+  <div class="container">
+    <form>
+      <input type="file" multiple accept=".jpg, .png" />
+    </form>
+  </div>
+</section>
+
+
+<!-- Grouping Related Fields  -->
+<section>
+  <div class="title">
+    <h1>Grouping Related Fields</h1>
+    <p>1. add <strong>fieldset</strong> element -> <em>&lt;fieldset&gt;</em> <em>&lt;fieldset /&gt;</em></p>
+    <p>2. inside it we have a <strong>legend</strong> element -> &lt;fieldset&gt; <em>&lt;legend&gt;...&lt;legend /&gt;</em> &lt;fieldset /&gt; -> <strong>label of our group</strong></p>
+  </div>
+  <div class="container">
+    <form>
+      <fieldset>
+        <legend>Login</legend>
+        <!-- We can use the "placeholder attribute" insted of label  -->
+        <input placeholder="Name" id="name" type="text" autofocus required />      
+        <input placeholder="Email" id="email" type="email" required />      
+        <input placeholder="Number" id="number" type="number" min="0" required/>      
+        <input placeholder="Password" id="password" type="password" maxlength="9" required/>      
+        <input id="date" type="date" required/>
+        <button type="submit">Register</button>
+        <button type="reset">clear</button>    
+        <textarea placeholder="Comment"></textarea>
+      </fieldset>
+    </form>
+  </div>
+  </section>
+
+
+<!-- Hidden Fields -->
+<section>
+  <div class="title">
+  <h1>Hidden Fields</h1>
+  <p>use for <strong>storing the ID</strong> of the content being edited.</p>
+  <p>* * never store sensitive values in a hidden field</p>
+  <p>1. add input element -> <em>&lt;input type="..." /&gt;</em></p>
+  <p>2. set the type attributet to <strong>hidden</strong> -> &lt;input type="<em>hidden</em>" /&gt;</p>
+  <p>3. add a <strong>name</strong> attributet -> &lt;input type="hidden" <em>name="..."</em> /&gt;</p>
+  <p>4. add a <strong>value</strong> attributet -> &lt;input type="hidden" name="..." <em>value="..."</em> /&gt;</p>
+  <p><strong>&lt;input type="hidden" name="..." value="..." /&gt;</strong></p>
+</div>
+  <form>
+    <input type="hidden" name="course-id" value="1234" />
+  </form>
+</section>
+
+  
+<!-- Data Validation  -->
+<section>
+  <div class="title">
+    <h1>Data Validation</h1>
+    <p>1. befor submiting a form, we should always <strong>validate</strong> the data</p>
+    <p>2. html5 elements com with <strong>built in validation</strong>  -> e.g. &lt;input type="text" <em>required</em> /&gt; -> <strong>required</strong></p>
+    <p>examples of validation for basic <strong>text fields</strong>:<br><strong>- required</strong><br><strong>- minlength</strong><br><strong>- maxlength</strong> -> should always use it</p>
+    <p>examples of validation for some <strong>other fields</strong>:<br>- type=<strong>"email"</strong><br>- type=<strong>"date"</strong></p>
+    <p>for <strong>number</strong> we have two atteibutes -> &lt;input type="number" <em>min="0"</em> <em>max="..."</em> /&gt;<br><strong>- min</strong> -> should always use it, especially if you don't allow negative values<br><strong>- max</strong></p>
+  </div>
+</section>
+
+
+<!-- Submitting the Form  -->
+<section>
+  <div class="title">
+    <h1>Submitting the Form</h1>
+    <p>for <strong>submitting a form</strong>:</p>
+    <p><strong>1.</strong> 2 atteibutes should be set of the <strong>form</strong> element -> &lt;form <em>action</em>="..." <em>method</em>="..." &gt;&lt;/ form&gt;</p>
+    <p>
+      <strong>action</strong> -> the address where data is send (server)<br><strong>- create a backend for the form</strong><br>- - - go to <a href="https://formspree.io/forms/" target="_blank">formspree</a><br>- - - add a new project<br>- - - add a new form<br><strong>-</strong> copy the <strong>link</strong> of new form<br><strong>-</strong> paste the URL to <strong>action</strong> attribute
+    </p>
+    <p>
+      <strong>method</strong> -> how the data is sent<br>- - <strong>POST</strong> ->  form data will be include in the body of the HTTP request -> <em>the most common approach</em><br>- - <strong>GET</strong> ->  form data is included in the URL -> <em>if we want to bookmark the URL</em>
+    </p>
+    <p>
+      <strong>2.</strong> each <strong>input</strong> field should have a <strong>name</strong> attribute -> &lt;input <em>name="..."</em> /&gt;
+    </p>
+ 
+  </div>
+  <div class="container">
+    <form action="https://formspree.io/f/xoqgzgdz" method="post">
+      <fieldset>
+        <legend>Login</legend>
+        <input placeholder="Name" name="name" type="text" required maxlength="20"/>      
+        <input placeholder="Email" name="email" type="email" required />      
+        <button type="submit">Register</button>
+      </fieldset>
+    </form>
+  </div>
+</section>
+</body>
+</html>

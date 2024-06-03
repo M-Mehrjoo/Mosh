@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformaitions-Transitions-Animations</title>
+    <link rel="stylesheet" href="/html-css/normalize.css" />
+    <link rel="stylesheet" href="Transformaitions-Transitions-Animations.css" />
+  </head>
+  <body>
+    <!-- Transformations 2D -->
+    <!-- Position elements in the center of screen -->
+    <section class="just-text">
+      <div class="title">
+        <h1>Position elements in the center of screen (their container)</h1>
+        <p>
+          set the style of the container
+          <strong>-></strong> for the whole page <strong>-></strong>
+          <em>container is body</em> <strong>-></strong> body {...}
+        </p>
+        <p>
+          <strong>1.</strong> display: flex;<br /><strong>2.</strong>
+          justify-content: center;<br /><strong>3.</strong> align-items:
+          center;<br /><strong>4.</strong> height: 100vh; <em>-></em> if the
+          container is body
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="title">
+        <h1>Transformations -> 2D</h1>
+        <p>
+          * The transformation is on hover effect applied to see it clearly *
+        </p>
+        <p>
+          use <em>transform</em> property -> { transform: ; }<br />-
+          <strong>rotate</strong> function <em>-></em> transform:
+          <em>rotate(...deg)</em><br />- <strong>scale</strong> function
+          <em>-></em> transform: <em>scale(...)</em><br />-
+          <strong>skew</strong> function <em>-></em> transform:
+          <em>skew(...deg)</em><br />- <strong>translate</strong> function
+          <em>-></em> transform: <em>translate( <strong>,</strong> )</em> ->
+          <strong
+            >move the element along the <em>x</em> and <em>y</em> axis</strong
+          >
+        </p>
+        <p>* we can combine this functions *</p>
+      </div>
+      <div class="container">
+        <secrion id="rotate">
+          <p>rotate</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+
+        <secrion id="scale">
+          <p>scale</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+
+        <secrion id="skew">
+          <p>skew</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+
+        <secrion id="translate">
+          <p>translate</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+      </div>
+    </section>
+
+    <!-- Transformations 3D -->
+    <section>
+      <div class="title">
+        <h1>Transformations -> 3D</h1>
+        <p>
+          <strong
+            >should define a <em>perspective</em> (a virtual space) ->
+            <em>the distance between the element and us</em></strong
+          >
+        </p>
+        <p>
+          <strong>1.</strong> use <strong>transform</strong> property -> {
+          <em>transform</em>: ; }
+        </p>
+        <p>
+          <strong>2.</strong> set <strong>perspective</strong> function
+          <em>-></em> transform: <em>perspective( )</em>
+        </p>
+        <p>
+          - <strong>translateZ</strong> function <em>-></em> transform:
+          perspective( ) <em>translateZ( )</em> ->
+          <strong>move the element along the <em>z</em> axis</strong>
+        </p>
+        <p>
+          - <strong>rotateY</strong> function <em>-></em> transform:
+          perspective( ) <em>rotateY(...deg)</em> ->
+          <strong> rotate the element in the 3D space </strong> (align Y axis)
+          <em>-></em><br />- - <strong> transform-origin</strong> property
+          <em>-></em> set the origin of rotation ->
+          <em>transform-origin: 0 50% ;</em> -> x(left) y(center)
+        </p>
+        <p>
+          - <strong>scale</strong> function <em>-></em> transform: perspective(
+          ) <em>scale(...)</em><br />- <strong>skew</strong> function
+          <em>-></em> transform: perspective( ) <em>skew(...deg)</em>
+        </p>
+        <p>* we can combine this functions *</p>
+      </div>
+      <div class="container">
+        <secrion id="translate-z">
+          <p>translate (move)</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+
+        <secrion id="rotate">
+          <p>rotate</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+
+        <secrion id="scale">
+          <p>scale</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+
+        <secrion id="skew">
+          <p>skew</p>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mollitia, omnis?
+            </p>
+          </div>
+        </secrion>
+      </div>
+    </section>
+  </body>
+</html>
